@@ -1,0 +1,40 @@
+.document-list {
+    position: absolute;
+    top: 91px; /* Учитываем высоту хедера */
+    left: 0; /* Начало от левого края */
+    margin-left: 250px; /* Отступ, чтобы учитывать ширину сайдбара */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: #f5f5f5; /* Фон для области документов */
+}
+
+.document-list .document {
+    width: 120px;
+    height: 120px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+
+.document-list .document:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.document-list .document-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.document-list .document-name {
+    font-size: 0.9rem;
+    color: #333;
+}

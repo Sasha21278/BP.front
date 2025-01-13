@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: start; /* Логотип по центру */
+    height: 100px; /* Высота шапки */
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    position: sticky; /* Делаем header всегда сверху */
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    height: 91px;
+    width: 296px;
+    object-fit: contain;
+}

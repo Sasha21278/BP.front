@@ -1,0 +1,23 @@
+.sidebar {
+    padding: 1rem;
+    background-color: #f4f4f4;
+    height: auto; /* Исправлено с 100vh на auto */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.sidebar ul li:hover {
+    color: #007bff;
+}

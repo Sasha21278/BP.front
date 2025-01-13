@@ -1,38 +1,68 @@
-.App {
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 91px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+}
+
+.logo {
+  height: 70px;
+  width: auto;
+  margin-left: 0;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row; /* Горизонтальное расположение */
+  margin-top: 91px; /* Учитываем высоту хедера */
+  height: calc(100vh - 91px); /* Высота без хедера */
+}
+
+.sidebar {
+  position: fixed;
+  top: 91px;
+  left: 0;
+  width: 200px;
+  height: calc(100vh - 91px); /* Высота оставшейся области */
+  background-color: #f5f5f5;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 999; /* Поверх контента */
+}
+
+.content-area {
+  margin-left: 200px; /* Учитываем ширину сайдбара */
+  width: calc(100% - 200px); /* Ширина оставшегося пространства */
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap; /* Расположение документов в строку */
+  gap: 20px;
+  align-items: flex-start; /* Документы начинаются сверху */
+}
+
+.document-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: calc((100% - 60px) / 3); /* Три документа в строке */
+  min-width: 150px; /* Минимальная ширина документа */
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: white;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.document-item:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Эффект наведения */
+  transform: translateY(-3px); /* Легкий подъем */
+  transition: all 0.2s ease-in-out;
 }
